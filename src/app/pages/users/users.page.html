@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title>Lista de usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    @for(user of users; track user.id) {
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title
+              >{{user.firstName}} {{user.lastName}}</ion-card-title
+            >
+            <ion-card-subtitle>{{user.email}}</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col>{{user.phone}}</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-button shape="round">
+                    Detalles <ion-icon slot="end" name="Person"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    }
+  </ion-grid>
+</ion-content>

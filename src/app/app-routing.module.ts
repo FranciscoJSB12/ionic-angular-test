@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
-      import('./pages/home/home.module').then((m) => m.HomePageModule),
+      import('./features/home/home.module').then((m) => m.HomePageModule),
   },
   {
     path: '',
@@ -13,19 +13,9 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'booking',
-    loadChildren: () =>
-      import('./pages/booking/booking.module').then((m) => m.HomePageModule),
-  },
-  {
-    path: 'tutors',
-    loadChildren: () =>
-      import('./pages/tutors/tutors.module').then((m) => m.TutorsPageModule),
-  },
-  {
     path: 'users',
     loadChildren: () =>
-      import('./pages/users/users.module').then((m) => m.UsersPageModule),
+      import('./features/users/users.module').then((m) => m.UsersPageModule),
   },
   {
     path: '**',

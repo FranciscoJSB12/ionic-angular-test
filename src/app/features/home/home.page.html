@@ -1,0 +1,66 @@
+<app-header>
+  <app-toolbar-title text="Inicio"></app-toolbar-title>
+</app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid class="custom-margin">
+    <ion-row>
+      <ion-col size="12" size-lg="4" offsetLg="4">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Bienvenido</ion-card-title>
+            <ion-card-subtitle>Secciones disponibles</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item>
+                <ion-thumbnail slot="start">
+                  <ion-icon
+                    style="font-size: 52px"
+                    name="school-outline"
+                    color="primary"
+                  ></ion-icon>
+                </ion-thumbnail>
+                <ion-label>Tutores</ion-label>
+                <ion-button shape="round" slot="end">
+                  Ver
+                  <ion-icon slot="end" name="arrow-redo-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+
+              <ion-item>
+                <ion-thumbnail slot="start">
+                  <ion-icon
+                    style="font-size: 52px"
+                    name="people-outline"
+                    color="primary"
+                  ></ion-icon>
+                </ion-thumbnail>
+                <ion-label>Usuarios </ion-label>
+                <ion-button shape="round" slot="end" routerLink="/users">
+                  Ver
+                  <ion-icon slot="end" name="arrow-redo-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+
+              <ion-item>
+                <ion-thumbnail slot="start">
+                  <ion-icon
+                    style="font-size: 52px"
+                    name="bed-outline"
+                    color="primary"
+                  ></ion-icon>
+                </ion-thumbnail>
+                <ion-label>Reservas</ion-label>
+                <ion-button shape="round" slot="end">
+                  Ver
+                  <ion-icon slot="end" name="arrow-redo-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

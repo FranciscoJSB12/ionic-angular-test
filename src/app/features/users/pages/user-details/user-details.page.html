@@ -1,0 +1,19 @@
+<app-header>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/users"></ion-back-button>
+  </ion-buttons>
+  <app-toolbar-title text="Detalle"></app-toolbar-title>
+</app-header>
+
+<ion-content [fullscreen]="true">
+  @if(user) {
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{user.firstName}} {{user.lastName}}</ion-card-title>
+      <ion-card-subtitle>{{user.email}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content> Celular: {{user.phone}} </ion-card-content>
+  </ion-card>
+  }
+</ion-content>

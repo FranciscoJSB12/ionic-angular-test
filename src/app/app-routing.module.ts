@@ -23,6 +23,13 @@ const routes: Routes = [
       import('./features/tutors/tutors.module').then((m) => m.TutorsPageModule),
   },
   {
+    path: 'booking',
+    loadChildren: () =>
+      import('./features/booking/booking.module').then(
+        (m) => m.BookingPageModule
+      ),
+  },
+  {
     path: '**',
     redirectTo: 'home',
   },
